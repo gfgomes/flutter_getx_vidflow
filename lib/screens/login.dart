@@ -99,7 +99,10 @@ class Login extends StatelessWidget {
                               fontSize: 16, fontWeight: FontWeight.w700),
                         ),
                         TextButton(
-                          onPressed: () => Get.to(() => Register()),
+                          onPressed: () => Get.to(
+                            () => Register(),
+                            transition: Transition.cupertino,
+                          ),
                           child: Text(
                             "Faça seu cadastro!",
                             style: TextStyle(

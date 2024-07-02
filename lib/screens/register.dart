@@ -106,7 +106,10 @@ class Register extends StatelessWidget {
                               fontSize: 16, fontWeight: FontWeight.w700),
                         ),
                         TextButton(
-                          onPressed: () => Get.to(() => Login()),
+                          onPressed: () => Get.to(
+                            () => Login(),
+                            transition: Transition.leftToRight,
+                          ),
                           child: Text(
                             "Faça seu login!",
                             style: TextStyle(
