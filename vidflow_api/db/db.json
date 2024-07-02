@@ -19,6 +19,12 @@
       "title": "titulo",
       "userId": 1,
       "id": 1
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "thumbURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/A-Cat.jpg/800px-A-Cat.jpg",
+      "title": "Video 1"
     }
   ]
 }
