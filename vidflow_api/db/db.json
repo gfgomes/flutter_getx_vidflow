@@ -11,6 +11,12 @@
       "password": "$2a$10$mPU3.hrZUafxy9MgQ.a7OeyodYoxyBsQpql3/PGl2qdl4F9sl5opS",
       "user": "Gabriel",
       "id": 2
+    },
+    {
+      "email": "alberto@teste.com",
+      "password": "$2a$10$8fYjqFYz6wXo5K28tW9xyuLYtS5dx.nBwoUVncGivSakKxzC.K/sC",
+      "user": "Alberto",
+      "id": 3
     }
   ],
   "videos": [
@@ -25,6 +31,18 @@
       "userId": 2,
       "thumbURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/A-Cat.jpg/800px-A-Cat.jpg",
       "title": "Video 1"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "thumbURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Adult_Cane_toad.jpg/800px-Adult_Cane_toad.jpg",
+      "title": "Vídeo 2"
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "thumbURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Amazon_Monkey.jpg/800px-Amazon_Monkey.jpg",
+      "title": "Video 10"
     }
   ]
 }
