@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vidflow/Controllers/register_controller.dart';
 import 'package:vidflow/components/custom_button.dart';
 import 'package:vidflow/components/custom_field.dart';
 import 'package:vidflow/screens/login.dart';
@@ -8,10 +9,8 @@ import 'package:vidflow/utils/images.dart';
 
 class Register extends StatelessWidget {
   Register({super.key});
-  
-  final TextEditingController textUserController = TextEditingController();
-  final TextEditingController textEmailController = TextEditingController();
-  final TextEditingController textPasswordController = TextEditingController();
+
+  final RegisterController registerController = Get.put(RegisterController());
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,8 @@ class Register extends StatelessWidget {
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 40),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 40),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -35,11 +35,17 @@ class Register extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.only(bottom: 24.0),
-                      child: Image.asset(AppImages.registerImage, height: 160,),
+                      child: Image.asset(
+                        AppImages.registerImage,
+                        height: 160,
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 24.0),
-                      child: Image.asset(AppImages.logo, height: 28,),
+                      child: Image.asset(
+                        AppImages.logo,
+                        height: 28,
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 16.0),
@@ -59,17 +65,23 @@ class Register extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 32.0),
                       child: CustomField(
-                          label: "Nome", textController: textUserController),
+                          label: "Nome",
+                          textController:
+                              registerController.textUserController),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 32.0),
                       child: CustomField(
-                          label: "Email", textController: textEmailController),
+                          label: "Email",
+                          textController:
+                              registerController.textEmailController),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 32.0),
                       child: CustomField(
-                          label: "Senha", textController: textPasswordController),
+                          label: "Senha",
+                          textController:
+                              registerController.textPasswordController),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -77,13 +89,21 @@ class Register extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 32.0),
                           child: CustomButton(
-                              onTap: (){}, text: "Cadastrar", icon: Icons.login),
+                              onTap: () {
+                                registerController.register();
+                              },
+                              text: "Cadastrar",
+                              icon: Icons.login),
                         ),
-                        
                       ],
                     ),
-                    Column(children: <Widget>[
-                      const Text("Já possui uma conta?", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),),
+                    Column(
+                      children: <Widget>[
+                        const Text(
+                          "Já possui uma conta?",
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w700),
+                        ),
                         TextButton(
                           onPressed: () => Get.to(() => Login()),
                           child: Text(
@@ -95,7 +115,8 @@ class Register extends StatelessWidget {
                             ),
                           ),
                         ),
-                    ],)
+                      ],
+                    )
                   ],
                 ),
               ),

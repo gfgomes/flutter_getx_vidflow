@@ -5,6 +5,12 @@
       "password": "$2a$10$A1khrLJu2.SUcQF7ai6R..33VvqjYMELo68NXwi4jYo2NWfM.JSFi",
       "user": "Beto",
       "id": 1
+    },
+    {
+      "email": "gabriel@teste.com",
+      "password": "$2a$10$mPU3.hrZUafxy9MgQ.a7OeyodYoxyBsQpql3/PGl2qdl4F9sl5opS",
+      "user": "Gabriel",
+      "id": 2
     }
   ],
   "videos": [
