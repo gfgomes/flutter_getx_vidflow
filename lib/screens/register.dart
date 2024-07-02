@@ -91,6 +91,7 @@ class Register extends StatelessWidget {
                           child: CustomButton(
                               onTap: () {
                                 registerController.register();
+                                Get.offAll(() => Login());
                               },
                               text: "Cadastrar",
                               icon: Icons.login),
